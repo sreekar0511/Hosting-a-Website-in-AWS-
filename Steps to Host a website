@@ -1,0 +1,13 @@
+
+Step 1 - Open S3 bucket and create a new S3 bucket . Then open public acess as we host it to customers .Then make sure to disable server-side-encryption 
+Then click on create bucket and then after creating bucket check in dashboard if the bucket shows access is object can be public 
+
+Step 2 - In this step we upload the zip file of the website .
+
+Step 3 - Now we have to remember that objects can be public but is not public so we have to change the bucket policy for this object to be public .For that
+we go into the S3 bucket created then we click on permisiions and scroling down we click on edit bucket policy ,we can either manually change it or we can 
+use policy genarater.If clickin on policy generater we select S3 Bucket Policy for selecting type of policy , principal will be "*" action will be "GetObject",
+add bucket name  as the ARN Then we click on Add Statement and genrate a policy .Policy generator will do the work and it will give a policy where we copy 
+paste it in in the bucket policy Now the object is public 
+
+Step 4 - Work with EC2 instance I will give the commands in another file called " EC2 Instance configaration for hosting a website 
