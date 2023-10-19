@@ -10,4 +10,4 @@ use policy genarater.If clickin on policy generater we select S3 Bucket Policy f
 add bucket name  as the ARN Then we click on Add Statement and genrate a policy .Policy generator will do the work and it will give a policy where we copy 
 paste it in in the bucket policy Now the object is public 
 
-Step 4 - Work with EC2 instance I will give the commands in another file called " EC2 Instance configaration for hosting a website 
+Step 4 - Work with EC2 instance I will give the commands in another file called " EC2 Instance configaration for hosting a website "
