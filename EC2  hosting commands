@@ -1,0 +1,51 @@
+In this file there will be commands to write in virtual server for hosting a website 
+
+Step 1 - Open Terminal , Now we have to SSH into the instance  for that we go to instance and click on instance connect for hosting the website .
+After cliccking it will give us many options to connect but in this file i will show how to do it with SSH client .Copy example from SSL client and 
+paste it in the local device terminal to connect with ec2 instance 
+
+After pasting and clicking on enter the terminal asks if you want to continue or not type on yes 
+
+Type on "ls" in temrinal and select where the key pair is downloaded and open it . Then EC2 instance runs in our local device 
+Type "sudo su" (for gaining root access)
+Type "sudo yum update"(to check if your using latest yum or not)
+type Yes for conformation 
+
+Install Apache now 
+
+Type in "sudo yum install httpd -y "
+
+Now Apache is installed in EC2 Instance 
+
+For starting Apache 
+Go back to terminal 
+
+type in "systemt1 start httpd"
+type in "system enable httpd"
+Now Apache is running 
+
+For checking the status of Apache we type in "systemt1 status httpd"  if it is green then we are good to go 
+
+Now lets go into the website directory using command "cd and directory of website with it "
+
+For getting the file we use the uploaded object in S3 as shown in "Steps to Host a website"
+
+Go to S3 and copy object URL
+In terminal we type wget and paste the URl beside it 
+
+Now the file is downloaded in EC2 to check type ls 
+
+We have to unzip the file 
+
+For that we type unzip and type in the name of wensite downloaded 
+
+Now the folder is unziped 
+
+Now type in command mv Folder name and click on enter 
+
+Now we have to start hhtpd by clicking on command systemt1 start httpd 
+
+Now the website is  running in the above URl of the object 
+
+So that how e host a wesite using S3 and EC2 instance 
+
