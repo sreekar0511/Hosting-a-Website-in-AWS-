@@ -1,0 +1,12 @@
+Using Ec2 instance for hosting 
+Note - Please follow steps througly as it will be a problem if you miss few steps 
+
+Step 1 - Create a instance with genaral t2.micro . we can use another instance type also but i am using t2.micro 
+Number of instances - 1 (Make sure auto assign public Ip is enabled )
+
+Step 2 - We create a new security group where 
+Type is SSH , Protocol - TCP , Port range - 80 Source is 0.0.0.0/0 (for making it public )
+Next Rule  Type in HTTP , Protocol - TCP ,Port range - 80  Source 0.0.0.0/0 (for making it public )
+Now launch the security group 
+
+Step 3 - Now check for instance running or not After that go to other file called "EC2  hsoting commands" 
